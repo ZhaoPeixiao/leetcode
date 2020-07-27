@@ -31,7 +31,7 @@ public class Convert {
 
 
     public static void main(String[] args) {
-        String string = "Find Numbers with Even Number of Digits";
+        String string = "Remove Outermost Parentheses";
         System.out.println(toPackage(string));
         System.out.println(toClass(string));
     }
