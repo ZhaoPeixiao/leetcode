@@ -31,7 +31,7 @@ public class Convert {
 
 
     public static void main(String[] args) {
-        String string = "Remove Outermost Parentheses";
+        String string = "Generate a String With Characters That Have Odd Counts";
         System.out.println(toPackage(string));
         System.out.println(toClass(string));
     }
