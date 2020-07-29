@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * @Author: Peixiao Zhao
  */
@@ -5,7 +7,7 @@ public class Convert {
     public static String toPackage(String string){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < string.length(); i ++){
-            if (string.charAt(i) == ' '){
+            if (string.charAt(i) == ' ' || string.charAt(i) == '-'){
                 continue;
             } else if (Character.isUpperCase(string.charAt(i))) {
                 char c = Character.toLowerCase(string.charAt(i));
@@ -20,7 +22,7 @@ public class Convert {
     public static String toClass(String string){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < string.length(); i ++){
-            if (string.charAt(i) == ' '){
+            if (string.charAt(i) == ' ' || string.charAt(i) == '-'){
                 continue;
             } else{
                 stringBuilder.append(string.charAt(i));
@@ -31,7 +33,8 @@ public class Convert {
 
 
     public static void main(String[] args) {
-        String string = "Generate a String With Characters That Have Odd Counts";
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
         System.out.println(toPackage(string));
         System.out.println(toClass(string));
     }
