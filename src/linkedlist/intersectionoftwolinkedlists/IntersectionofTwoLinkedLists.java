@@ -6,7 +6,7 @@ import linkedlist.ListNode;
  * @author Peixiao Zhao
  * @date 2020/9/24 22:31
  */
-public class Solution {
+class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
