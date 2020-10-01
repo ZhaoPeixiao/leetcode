@@ -9,7 +9,8 @@ public class Convert {
     public static String toPackage(String string){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < string.length(); i ++){
-            if (string.charAt(i) == ' ' || string.charAt(i) == '-'){
+            if (string.charAt(i) == ' ' || string.charAt(i) == '-' ||
+                    string.charAt(i) == '(' || string.charAt(i) == ')'){
                 continue;
             } else if (Character.isUpperCase(string.charAt(i))) {
                 char c = Character.toLowerCase(string.charAt(i));
@@ -24,7 +25,8 @@ public class Convert {
     public static String toClass(String string){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < string.length(); i ++){
-            if (string.charAt(i) == ' ' || string.charAt(i) == '-'){
+            if (string.charAt(i) == ' ' || string.charAt(i) == '-' ||
+                    string.charAt(i) == '(' || string.charAt(i) == ')'){
                 continue;
             } else{
                 stringBuilder.append(string.charAt(i));
